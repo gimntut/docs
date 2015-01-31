@@ -9,11 +9,15 @@ subtitle: Data-binding
 {% include toc.html %}
 
 There are several ways to bind data to a template. You can:
+Есть несколько способов связывания данных в шаблонах. Вы можете:
 
 *   Create a single instance of a template, by specifying a single object using the `bind` attribute.
+*   Создать один экземпляр шаблона, указав один объект используя атрибут `bind`.
 *   Create multiple instances of a template, by specifying an array of objects using the `repeat`
      attribute.
+*   Создать несколько экземпляров шаблона, указав массив объектов используя аттрибут `repeat`
 *   Conditionally create an instance of a template, depending on whether the value passed to the `if` attribute is truthy.
+*   Cоздать экземпляр шаблона по условию, указаному в атрибуте `if`.
 
 **Note:** Binding templates only works inside {{site.project_title}} elements. For example, if a
 `<template>` element is inserted directly into a page’s `<body>` tag, the `bind` attribute
@@ -21,9 +25,15 @@ doesn’t work as described here. If you need to use template binding outside of
 {{site.project_title}} element, see [Using data binding outside of a {{site.project_title}} element](/docs/polymer/databinding-advanced.html#bindingoutside).
 {: .alert .alert-info }
 
+**Note:** Связывание шаблонов работает только внутри элементов {{site.project_title}}. Например, если элемент `<template>` вставлен прямо в тег `<body>`, то атрибут `bind` не будет работать так, как здесь описано.
+Если вам нужно использовать связывание за пределами элемента {{site.project_title}}, то читайте [Использование внешнего связывания элементов {{site.project_title}}](/docs/polymer/databinding-advanced.html#bindingoutside)
+{: .alert .alert-info }
+
 When you use a binding _inside_ a template, you create a _node binding_, which binds a model value to a
 DOM node. Node bindings are interpreted by the node, based on the element type and where the binding
 occurs. See [Node bindings](#node-bindings) for details.
+
+При использовании связывания _внутри_ шаблона, вы создаёте _узловое(?) связывание_, т.е. значение модели связывается с узлом DOM. Узловые связывания интерпритируются узлом, основанном на типе элемента, в котором возникает связывание (какое-то бессмысленое предложение). Более подробно можно прочитать в разделе [Узловое связывание](#node-bindings).
 
 ## Single template instances
 
